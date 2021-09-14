@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		C92E800026F1072500FAB92E /* morningBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C92E7FFF26F1072500FAB92E /* morningBtn.png */; };
 		C92E800226F1076900FAB92E /* nightBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C92E800126F1076900FAB92E /* nightBtn.png */; };
-		C92E800426F1086E00FAB92E /* mainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = C92E800326F1086E00FAB92E /* mainBG.png */; };
 		C92E800626F108DA00FAB92E /* mainMosque.png in Resources */ = {isa = PBXBuildFile; fileRef = C92E800526F108DA00FAB92E /* mainMosque.png */; };
 		C92E800826F109D600FAB92E /* App Logo-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C92E800726F109D600FAB92E /* App Logo-01.png */; };
 		C92E800A26F10BE900FAB92E /* UtilFun.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92E800926F10BE900FAB92E /* UtilFun.swift */; };
-		C92E800C26F10FEB00FAB92E /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C92E800B26F10FEA00FAB92E /* bg.png */; };
 		C92E800E26F1116200FAB92E /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C92E800D26F1116200FAB92E /* 1.jpg */; };
+		C92E801026F1132C00FAB92E /* homeBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C92E800F26F1132C00FAB92E /* homeBtn.png */; };
+		C92E801226F1138500FAB92E /* detailBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = C92E801126F1138500FAB92E /* detailBottom.png */; };
 		C9AABD2126F0AB27006913D7 /* QuranAlKareem.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9AABD2026F0AB27006913D7 /* QuranAlKareem.ttf */; };
 		C9AABD2326F0C216006913D7 /* alarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AABD2226F0C216006913D7 /* alarmViewController.swift */; };
 		C9E586B326EF8AE60008140D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E586B226EF8AE60008140D /* AppDelegate.swift */; };
@@ -50,12 +50,12 @@
 /* Begin PBXFileReference section */
 		C92E7FFF26F1072500FAB92E /* morningBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = morningBtn.png; sourceTree = "<group>"; };
 		C92E800126F1076900FAB92E /* nightBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nightBtn.png; sourceTree = "<group>"; };
-		C92E800326F1086E00FAB92E /* mainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBG.png; sourceTree = "<group>"; };
 		C92E800526F108DA00FAB92E /* mainMosque.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainMosque.png; sourceTree = "<group>"; };
 		C92E800726F109D600FAB92E /* App Logo-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App Logo-01.png"; sourceTree = "<group>"; };
 		C92E800926F10BE900FAB92E /* UtilFun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilFun.swift; sourceTree = "<group>"; };
-		C92E800B26F10FEA00FAB92E /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		C92E800D26F1116200FAB92E /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		C92E800F26F1132C00FAB92E /* homeBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeBtn.png; sourceTree = "<group>"; };
+		C92E801126F1138500FAB92E /* detailBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detailBottom.png; sourceTree = "<group>"; };
 		C9AABD2026F0AB27006913D7 /* QuranAlKareem.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuranAlKareem.ttf; sourceTree = "<group>"; };
 		C9AABD2226F0C216006913D7 /* alarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarmViewController.swift; sourceTree = "<group>"; };
 		C9E586AF26EF8AE60008140D /* azkary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = azkary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,11 +140,11 @@
 				C9AABD2026F0AB27006913D7 /* QuranAlKareem.ttf */,
 				C92E7FFF26F1072500FAB92E /* morningBtn.png */,
 				C92E800126F1076900FAB92E /* nightBtn.png */,
-				C92E800326F1086E00FAB92E /* mainBG.png */,
 				C92E800526F108DA00FAB92E /* mainMosque.png */,
-				C92E800B26F10FEA00FAB92E /* bg.png */,
 				C92E800726F109D600FAB92E /* App Logo-01.png */,
 				C92E800D26F1116200FAB92E /* 1.jpg */,
+				C92E800F26F1132C00FAB92E /* homeBtn.png */,
+				C92E801126F1138500FAB92E /* detailBottom.png */,
 			);
 			path = azkary;
 			sourceTree = "<group>";
@@ -275,13 +275,13 @@
 				C9E586E326EF8C820008140D /* STC-Bold.ttf in Resources */,
 				C92E800026F1072500FAB92E /* morningBtn.png in Resources */,
 				C9E586BF26EF8AE90008140D /* LaunchScreen.storyboard in Resources */,
-				C92E800426F1086E00FAB92E /* mainBG.png in Resources */,
 				C9E586BC26EF8AE90008140D /* Assets.xcassets in Resources */,
 				C9E586BA26EF8AE60008140D /* Main.storyboard in Resources */,
+				C92E801226F1138500FAB92E /* detailBottom.png in Resources */,
 				C9AABD2126F0AB27006913D7 /* QuranAlKareem.ttf in Resources */,
 				C92E800E26F1116200FAB92E /* 1.jpg in Resources */,
-				C92E800C26F10FEB00FAB92E /* bg.png in Resources */,
 				C92E800226F1076900FAB92E /* nightBtn.png in Resources */,
+				C92E801026F1132C00FAB92E /* homeBtn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
