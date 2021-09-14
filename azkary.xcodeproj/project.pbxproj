@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C92E800026F1072500FAB92E /* morningBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C92E7FFF26F1072500FAB92E /* morningBtn.png */; };
+		C92E800226F1076900FAB92E /* nightBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C92E800126F1076900FAB92E /* nightBtn.png */; };
+		C92E800426F1086E00FAB92E /* mainBG.png in Resources */ = {isa = PBXBuildFile; fileRef = C92E800326F1086E00FAB92E /* mainBG.png */; };
+		C92E800626F108DA00FAB92E /* mainMosque.png in Resources */ = {isa = PBXBuildFile; fileRef = C92E800526F108DA00FAB92E /* mainMosque.png */; };
+		C92E800826F109D600FAB92E /* App Logo-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C92E800726F109D600FAB92E /* App Logo-01.png */; };
+		C92E800A26F10BE900FAB92E /* UtilFun.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92E800926F10BE900FAB92E /* UtilFun.swift */; };
+		C92E800C26F10FEB00FAB92E /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = C92E800B26F10FEA00FAB92E /* bg.png */; };
+		C92E800E26F1116200FAB92E /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C92E800D26F1116200FAB92E /* 1.jpg */; };
+		C9AABD2126F0AB27006913D7 /* QuranAlKareem.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9AABD2026F0AB27006913D7 /* QuranAlKareem.ttf */; };
+		C9AABD2326F0C216006913D7 /* alarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AABD2226F0C216006913D7 /* alarmViewController.swift */; };
 		C9E586B326EF8AE60008140D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E586B226EF8AE60008140D /* AppDelegate.swift */; };
 		C9E586B526EF8AE60008140D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E586B426EF8AE60008140D /* SceneDelegate.swift */; };
 		C9E586B726EF8AE60008140D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E586B626EF8AE60008140D /* ViewController.swift */; };
@@ -15,6 +25,9 @@
 		C9E586BF26EF8AE90008140D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E586BD26EF8AE90008140D /* LaunchScreen.storyboard */; };
 		C9E586CA26EF8AE90008140D /* azkaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E586C926EF8AE90008140D /* azkaryTests.swift */; };
 		C9E586D526EF8AE90008140D /* azkaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E586D426EF8AE90008140D /* azkaryUITests.swift */; };
+		C9E586E326EF8C820008140D /* STC-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9E586E226EF8C820008140D /* STC-Bold.ttf */; };
+		C9E586E726EF94350008140D /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E586E626EF94350008140D /* mainViewController.swift */; };
+		C9E586E926EF998F0008140D /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E586E826EF998F0008140D /* detailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +48,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C92E7FFF26F1072500FAB92E /* morningBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = morningBtn.png; sourceTree = "<group>"; };
+		C92E800126F1076900FAB92E /* nightBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nightBtn.png; sourceTree = "<group>"; };
+		C92E800326F1086E00FAB92E /* mainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainBG.png; sourceTree = "<group>"; };
+		C92E800526F108DA00FAB92E /* mainMosque.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainMosque.png; sourceTree = "<group>"; };
+		C92E800726F109D600FAB92E /* App Logo-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App Logo-01.png"; sourceTree = "<group>"; };
+		C92E800926F10BE900FAB92E /* UtilFun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilFun.swift; sourceTree = "<group>"; };
+		C92E800B26F10FEA00FAB92E /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		C92E800D26F1116200FAB92E /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		C9AABD2026F0AB27006913D7 /* QuranAlKareem.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuranAlKareem.ttf; sourceTree = "<group>"; };
+		C9AABD2226F0C216006913D7 /* alarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarmViewController.swift; sourceTree = "<group>"; };
 		C9E586AF26EF8AE60008140D /* azkary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = azkary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E586B226EF8AE60008140D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9E586B426EF8AE60008140D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +72,9 @@
 		C9E586D026EF8AE90008140D /* azkaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = azkaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E586D426EF8AE90008140D /* azkaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = azkaryUITests.swift; sourceTree = "<group>"; };
 		C9E586D626EF8AE90008140D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9E586E226EF8C820008140D /* STC-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "STC-Bold.ttf"; sourceTree = "<group>"; };
+		C9E586E626EF94350008140D /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		C9E586E826EF998F0008140D /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +129,22 @@
 				C9E586B426EF8AE60008140D /* SceneDelegate.swift */,
 				C9E586B626EF8AE60008140D /* ViewController.swift */,
 				C9E586B826EF8AE60008140D /* Main.storyboard */,
+				C9AABD2226F0C216006913D7 /* alarmViewController.swift */,
+				C9E586E626EF94350008140D /* mainViewController.swift */,
+				C92E800926F10BE900FAB92E /* UtilFun.swift */,
+				C9E586E826EF998F0008140D /* detailViewController.swift */,
 				C9E586BB26EF8AE90008140D /* Assets.xcassets */,
 				C9E586BD26EF8AE90008140D /* LaunchScreen.storyboard */,
 				C9E586C026EF8AE90008140D /* Info.plist */,
+				C9E586E226EF8C820008140D /* STC-Bold.ttf */,
+				C9AABD2026F0AB27006913D7 /* QuranAlKareem.ttf */,
+				C92E7FFF26F1072500FAB92E /* morningBtn.png */,
+				C92E800126F1076900FAB92E /* nightBtn.png */,
+				C92E800326F1086E00FAB92E /* mainBG.png */,
+				C92E800526F108DA00FAB92E /* mainMosque.png */,
+				C92E800B26F10FEA00FAB92E /* bg.png */,
+				C92E800726F109D600FAB92E /* App Logo-01.png */,
+				C92E800D26F1116200FAB92E /* 1.jpg */,
 			);
 			path = azkary;
 			sourceTree = "<group>";
@@ -231,9 +270,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92E800826F109D600FAB92E /* App Logo-01.png in Resources */,
+				C92E800626F108DA00FAB92E /* mainMosque.png in Resources */,
+				C9E586E326EF8C820008140D /* STC-Bold.ttf in Resources */,
+				C92E800026F1072500FAB92E /* morningBtn.png in Resources */,
 				C9E586BF26EF8AE90008140D /* LaunchScreen.storyboard in Resources */,
+				C92E800426F1086E00FAB92E /* mainBG.png in Resources */,
 				C9E586BC26EF8AE90008140D /* Assets.xcassets in Resources */,
 				C9E586BA26EF8AE60008140D /* Main.storyboard in Resources */,
+				C9AABD2126F0AB27006913D7 /* QuranAlKareem.ttf in Resources */,
+				C92E800E26F1116200FAB92E /* 1.jpg in Resources */,
+				C92E800C26F10FEB00FAB92E /* bg.png in Resources */,
+				C92E800226F1076900FAB92E /* nightBtn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +308,10 @@
 			files = (
 				C9E586B726EF8AE60008140D /* ViewController.swift in Sources */,
 				C9E586B326EF8AE60008140D /* AppDelegate.swift in Sources */,
+				C92E800A26F10BE900FAB92E /* UtilFun.swift in Sources */,
+				C9E586E726EF94350008140D /* mainViewController.swift in Sources */,
+				C9E586E926EF998F0008140D /* detailViewController.swift in Sources */,
+				C9AABD2326F0C216006913D7 /* alarmViewController.swift in Sources */,
 				C9E586B526EF8AE60008140D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

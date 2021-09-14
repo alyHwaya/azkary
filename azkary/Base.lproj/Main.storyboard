@@ -1,24 +1,317 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="QuranAlKareem.ttf">
+            <string>Al-QuranAlKareem</string>
+        </array>
+        <array key="STC-Bold.ttf">
+            <string>STC-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="mainViewController" customModule="azkary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eJq-wZ-F4D">
+                                <rect key="frame" x="-10" y="-10" width="434" height="916"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI6-yL-Mq6">
+                                <rect key="frame" x="72" y="433" width="270" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="O9X-Lh-r2b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="25"/>
+                                <state key="normal" backgroundImage="morningBtn.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1OB-6N-Pbg" kind="show" identifier="morning" id="C67-Ko-1ee"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pb9-KM-lvJ">
+                                <rect key="frame" x="72" y="509" width="270" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="kih-on-hc4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="20"/>
+                                <state key="normal" backgroundImage="nightBtn.png"/>
+                                <connections>
+                                    <segue destination="1OB-6N-Pbg" kind="show" identifier="night" id="YAB-e9-Dbg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6D-sU-dHe">
+                                <rect key="frame" x="374" y="104" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ewA-7S-g5p"/>
+                                    <constraint firstAttribute="width" constant="30" id="gqT-YV-IAi"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="gearshape" catalog="system"/>
+                                <connections>
+                                    <segue destination="GcS-eQ-wY3" kind="show" id="Pv0-bM-fWS"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App Logo-01.png" translatesAutoresizingMaskIntoConstraints="NO" id="HsL-4M-8ho">
+                                <rect key="frame" x="117" y="233" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="Bhs-Ye-lQh"/>
+                                    <constraint firstAttribute="width" constant="180" id="ziP-2m-wJz"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainMosque.png" translatesAutoresizingMaskIntoConstraints="NO" id="GxP-ys-tx9">
+                                <rect key="frame" x="57" y="572" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="WEc-fK-Wcv"/>
+                                    <constraint firstAttribute="height" constant="300" id="lG7-fj-4zP"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuF-pf-NTJ">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YUV-8W-CxF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GI6-yL-Mq6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0hZ-jF-CXz"/>
+                            <constraint firstItem="pb9-KM-lvJ" firstAttribute="top" secondItem="GI6-yL-Mq6" secondAttribute="bottom" constant="20" id="1FL-xY-ilh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W6D-sU-dHe" secondAttribute="trailing" constant="10" id="4c5-je-3fs"/>
+                            <constraint firstItem="GxP-ys-tx9" firstAttribute="top" secondItem="pb9-KM-lvJ" secondAttribute="bottom" constant="5" id="FpU-zr-1hK"/>
+                            <constraint firstItem="AuF-pf-NTJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ICo-dn-H3O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AuF-pf-NTJ" secondAttribute="bottom" id="KPA-ql-Lda"/>
+                            <constraint firstItem="eJq-wZ-F4D" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-10" id="RJn-He-q60"/>
+                            <constraint firstItem="HsL-4M-8ho" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SMp-G8-XSo"/>
+                            <constraint firstItem="GI6-yL-Mq6" firstAttribute="top" secondItem="HsL-4M-8ho" secondAttribute="bottom" constant="20" id="Urh-AI-zBR"/>
+                            <constraint firstAttribute="trailing" secondItem="eJq-wZ-F4D" secondAttribute="trailing" constant="-10" id="afB-al-aiV"/>
+                            <constraint firstItem="eJq-wZ-F4D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-10" id="cXf-ME-O20"/>
+                            <constraint firstItem="GxP-ys-tx9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gz6-j5-KQj"/>
+                            <constraint firstItem="AuF-pf-NTJ" firstAttribute="top" secondItem="GxP-ys-tx9" secondAttribute="bottom" constant="-60" id="lmA-Cl-dRv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AuF-pf-NTJ" secondAttribute="trailing" id="pNp-xu-fyW"/>
+                            <constraint firstItem="W6D-sU-dHe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="rhd-Fn-qnL"/>
+                            <constraint firstItem="pb9-KM-lvJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xkz-94-iHa"/>
+                            <constraint firstAttribute="bottom" secondItem="eJq-wZ-F4D" secondAttribute="bottom" constant="-10" id="zXf-dL-b25"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logo" destination="HsL-4M-8ho" id="Nau-Gz-k31"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="92.753623188405811" y="97.767857142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PHV-dV-ffg">
+            <objects>
+                <viewController id="GcS-eQ-wY3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8D6-Be-mNs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMt-km-bb2">
+                                <rect key="frame" x="187" y="114" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Alarm"/>
+                                <connections>
+                                    <segue destination="7nc-Yq-59L" kind="show" id="6qp-Io-b2Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1M-rE-K3B">
+                                <rect key="frame" x="170" y="219" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="other apps"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSx-q4-REW">
+                                <rect key="frame" x="172" y="390" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Support us"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M4l-8F-hhy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="J53-th-VhH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rF1-yJ-c83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="385" y="-569"/>
+        </scene>
+        <!--Alarm View Controller-->
+        <scene sceneID="oro-bE-5eu">
+            <objects>
+                <viewController id="7nc-Yq-59L" customClass="alarmViewController" customModule="azkary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kyw-pH-Jfg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIE-xm-0Xo">
+                                <rect key="frame" x="162" y="218" width="89" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="20"/>
+                                <state key="normal" title="أذكار الصباح"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cif-V6-3bR">
+                                <rect key="frame" x="157" y="454" width="92" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="20"/>
+                                <state key="normal" title="أذكار المساء"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GBx-xO-LDP">
+                                <rect key="frame" x="39" y="224" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRS-v6-MVQ">
+                                <rect key="frame" x="39" y="466" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EQ8-Yy-shc">
+                                <rect key="frame" x="322" y="224" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="morningSwitchAct:" destination="7nc-Yq-59L" eventType="valueChanged" id="HN7-2U-X2H"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4oI-Ov-7dO">
+                                <rect key="frame" x="322" y="466" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="nightSwitchAct:" destination="7nc-Yq-59L" eventType="valueChanged" id="9oQ-5f-NsX"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cdq-FU-6RB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ncF-2z-pQZ"/>
+                    <connections>
+                        <outlet property="morningSwitchOut" destination="EQ8-Yy-shc" id="KpQ-Wo-Uk8"/>
+                        <outlet property="morningTxtV" destination="GBx-xO-LDP" id="8aZ-cy-wGt"/>
+                        <outlet property="nightSwitchOut" destination="4oI-Ov-7dO" id="G4J-0p-tAX"/>
+                        <outlet property="nightTxtV" destination="vRS-v6-MVQ" id="KFe-ua-KLb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RkL-x0-HgY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294" y="-645"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Slq-OD-9PB">
+            <objects>
+                <viewController id="1OB-6N-Pbg" customClass="detailViewController" customModule="azkary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cv5-zV-Set">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="neJ-7Q-6zp">
+                                <rect key="frame" x="20" y="60" width="374" height="588"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Al-QuranAlKareem" family="Al-QuranAlKareem" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPm-hW-aKK">
+                                <rect key="frame" x="332" y="718" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextBtnAct:" destination="1OB-6N-Pbg" eventType="touchUpInside" id="JK9-2k-lgT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IL-LC-Qyv">
+                                <rect key="frame" x="50" y="718" width="59" height="30"/>
+                                <state key="normal" title="Previous"/>
+                                <connections>
+                                    <action selector="previousBtnAct:" destination="1OB-6N-Pbg" eventType="touchUpInside" id="Lgu-p1-9eS"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qBl-Mk-5Gi">
+                                <rect key="frame" x="158" y="716.5" width="98" height="33.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLS-Zh-cJF">
+                                        <rect key="frame" x="0.0" y="0.0" width="6.5" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عدد المرات:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8t-37-2j5">
+                                        <rect key="frame" x="11.5" y="0.0" width="86.5" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="20"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8W-J3-dob">
+                                <rect key="frame" x="184" y="678" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="repsBtnAct:" destination="1OB-6N-Pbg" eventType="touchUpInside" id="2hX-iF-4in"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JqO-WR-Gzw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JqO-WR-Gzw" firstAttribute="bottom" secondItem="SPm-hW-aKK" secondAttribute="bottom" constant="60" id="2Bq-vx-jX6"/>
+                            <constraint firstItem="SPm-hW-aKK" firstAttribute="top" secondItem="neJ-7Q-6zp" secondAttribute="bottom" constant="70" id="47s-7a-0FU"/>
+                            <constraint firstItem="JqO-WR-Gzw" firstAttribute="trailing" secondItem="SPm-hW-aKK" secondAttribute="trailing" constant="50" id="7U0-cx-gWw"/>
+                            <constraint firstItem="qBl-Mk-5Gi" firstAttribute="top" secondItem="O8W-J3-dob" secondAttribute="bottom" constant="8.5" id="8Vu-b3-9qP"/>
+                            <constraint firstItem="qBl-Mk-5Gi" firstAttribute="centerX" secondItem="cv5-zV-Set" secondAttribute="centerX" id="L0l-fU-NgR"/>
+                            <constraint firstItem="JqO-WR-Gzw" firstAttribute="bottom" secondItem="6IL-LC-Qyv" secondAttribute="bottom" constant="60" id="V31-yB-ikL"/>
+                            <constraint firstItem="JqO-WR-Gzw" firstAttribute="trailing" secondItem="neJ-7Q-6zp" secondAttribute="trailing" constant="20" id="XBS-Ve-uhK"/>
+                            <constraint firstItem="neJ-7Q-6zp" firstAttribute="top" secondItem="JqO-WR-Gzw" secondAttribute="top" constant="60" id="cH5-HW-Nse"/>
+                            <constraint firstItem="6IL-LC-Qyv" firstAttribute="leading" secondItem="JqO-WR-Gzw" secondAttribute="leading" constant="50" id="cH8-Y9-6La"/>
+                            <constraint firstItem="SPm-hW-aKK" firstAttribute="centerY" secondItem="qBl-Mk-5Gi" secondAttribute="centerY" id="gRD-aG-A7s"/>
+                            <constraint firstItem="neJ-7Q-6zp" firstAttribute="leading" secondItem="JqO-WR-Gzw" secondAttribute="leading" constant="20" id="qWc-u0-aXt"/>
+                            <constraint firstItem="O8W-J3-dob" firstAttribute="leading" secondItem="JqO-WR-Gzw" secondAttribute="leading" constant="184" id="rdy-gI-53V"/>
+                            <constraint firstItem="JqO-WR-Gzw" firstAttribute="trailing" secondItem="O8W-J3-dob" secondAttribute="trailing" constant="184" id="wbt-NC-6bn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="a6Y-0F-HOy"/>
+                    <connections>
+                        <outlet property="reps" destination="HLS-Zh-cJF" id="a6I-8H-QeI"/>
+                        <outlet property="zekrTxtVw" destination="neJ-7Q-6zp" id="mR9-7P-yg8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0B8-QE-f9V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.8840579710145" y="11.383928571428571"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YAB-e9-Dbg"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="1.jpg" width="750" height="750"/>
+        <image name="App Logo-01.png" width="177.36000061035156" height="226.32000732421875"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="mainMosque.png" width="411" height="412"/>
+        <image name="morningBtn.png" width="270" height="56"/>
+        <image name="nightBtn.png" width="270" height="58"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
