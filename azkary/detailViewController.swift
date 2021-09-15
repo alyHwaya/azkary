@@ -17,6 +17,7 @@ class detailViewController: UIViewController {
     
     var currentZekrIndex = 0
     
+    @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var reps: UILabel!
     var currentRep = 1
     @IBOutlet weak var zekrTxtVw: UITextView!
@@ -59,7 +60,23 @@ class detailViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    override func viewDidAppear(_ animated: Bool) {
+        
+        let move = UtilFun.makeTransform(vw: logo, scaleX: 4, scaleY: 4, translationX: 0, translationY: 0)
+        UIView.animate(withDuration: 0.7, animations: {
+            self.logo.transform = move
+            
+        })
+        let move2 = UtilFun.makeTransform(vw: logo, scaleX: 0.25, scaleY: 0.25, translationX: 0, translationY: 0)
+        UIView.animate(withDuration: 0.7, animations: {
+            self.logo.transform = move2
+            
+        })
+        
+        
+    }
     
+   
 
     /*
     // MARK: - Navigation

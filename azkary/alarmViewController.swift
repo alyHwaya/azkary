@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class alarmViewController: UIViewController, UITextFieldDelegate {
 
@@ -39,8 +40,53 @@ class alarmViewController: UIViewController, UITextFieldDelegate {
         prepareDatePicker()
         prepareTxtFlds()
         prepareSwitches()
+        checkForNotificationAuth()
+        
+       
+        
+        
     }
     
+    func checkForNotificationAuth(){
+        UNUserNotificationCenter.current().getNotificationSettings(){ (settings) in
+
+                switch settings.alertSetting{
+                case .enabled:
+                    print("enabled")
+                    //Permissions are granted
+
+                case .disabled:
+                    print("disabled")
+                    DispatchQueue.main.async {
+                        self.mySimpleAlert()
+                    }
+                    
+                   
+                    
+
+                    //Permissions are not granted
+
+                case .notSupported:
+                    print("notSupported")
+                    self.requestNotificationAuth()
+                    
+
+                    //The application does not support this notification type
+                @unknown default:
+                    print("Un known error")
+                }
+            }
+    }
+    
+    func requestNotificationAuth(){
+        UNUserNotificationCenter.current().requestAuthorization(options:
+                  [[.alert, .sound, .badge]],
+                      completionHandler: { (granted, error) in
+                  // Handle Error
+              })
+    }
+    
+      
     func textFieldDidBeginEditing(_ textField: UITextField) {
         currentTxtFld = textField
         timePicker.date = Date()
@@ -115,6 +161,27 @@ class alarmViewController: UIViewController, UITextFieldDelegate {
         let stringDate = dateFormatter.string(from: myDate)
         print(stringDate)
         return stringDate
+    }
+    
+    func mySimpleAlert(){
+        let alert = UIAlertController(title: "غير مفعلة", message: "التنبيهات غير مفعلة. برجاء تفعيلها من إعدادات الموبايل", preferredStyle: .alert)
+        let cancelBtn = UIAlertAction(title: "إلغاء", style: .cancel, handler: nil)
+        let okBtn = UIAlertAction(title: "تفعيل", style: .default, handler: {
+        _ in
+            DispatchQueue.main.async {
+                if let bundleIdentifier = Bundle.main.bundleIdentifier, let appSettings = URL(string: UIApplication.openSettingsURLString + bundleIdentifier) {
+                    if UIApplication.shared.canOpenURL(appSettings) {
+                        UIApplication.shared.open(appSettings)
+                    }
+                }
+            }
+        })
+        alert.addAction(okBtn)
+        alert.addAction(cancelBtn)
+        self.present(alert, animated: true, completion: {
+          print("do anything after completion")
+            //
+        })
     }
     /*
     // MARK: - Navigation
