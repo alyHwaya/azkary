@@ -78,6 +78,7 @@ class mainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.shared.applicationIconBadgeNumber = 0
 
         // Do any additional setup after loading the view.
     }
