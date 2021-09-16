@@ -10,6 +10,7 @@ import UserNotifications
 
 class alarmViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var logo: UIImageView!
     let timePicker = UIDatePicker()
     var currentTxtFld = UITextField()
     var selectedMorningDef = String()
@@ -22,7 +23,7 @@ class alarmViewController: UIViewController, UITextFieldDelegate {
         if morningSwitchOut.isOn{
             defaults.setValue(morningTxtV.text!, forKey: "morningAlarm")
             defaults.setValue(true, forKey: "morningAlarmOn")
-            setNotification(id: "morning", time: selectedMorningAlarm)
+            setNotification(id: "morning", time: stringToDate(str: morningTxtV.text!))
         }else{
             defaults.setValue(false, forKey: "morningAlarmOn")
         }
@@ -31,7 +32,7 @@ class alarmViewController: UIViewController, UITextFieldDelegate {
         if nightSwitchOut.isOn{
             defaults.setValue(nightTxtV.text!, forKey: "nightAlarm")
             defaults.setValue(true, forKey: "nightAlarmOn")
-            setNotification(id: "night", time: selectedNightAlarm)
+            setNotification(id: "night", time: stringToDate(str: morningTxtV.text!))
         }else{
             defaults.setValue(false, forKey: "nightAlarmOn")
         }
@@ -48,6 +49,23 @@ class alarmViewController: UIViewController, UITextFieldDelegate {
         selectedNightAlarm = stringToDate(str: nightTxtV.text ?? dateToStr(myDate: Date()))
         selectedMorningAlarm = stringToDate(str: morningTxtV.text ?? dateToStr(myDate: Date()))
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        let move = UtilFun.makeTransform(vw: logo, scaleX: 4, scaleY: 4, translationX: 0, translationY: 0)
+        UIView.animate(withDuration: 0.7, animations: {
+            self.logo.transform = move
+            
+        })
+        let move2 = UtilFun.makeTransform(vw: logo, scaleX: 0.25, scaleY: 0.25, translationX: 0, translationY: 0)
+        UIView.animate(withDuration: 0.7, animations: {
+            self.logo.transform = move2
+            
+        })
+        
+        
+    }
+    
     
     func checkForNotificationAuth(){
         UNUserNotificationCenter.current().getNotificationSettings(){ (settings) in
@@ -200,8 +218,8 @@ class alarmViewController: UIViewController, UITextFieldDelegate {
         
         let content = UNMutableNotificationContent()
         content.title = "Meeting Reminder"
-        content.subtitle = "messageSubtitle"
-        content.body = "Don't forget to bring coffee."
+        content.subtitle = dateToStr(myDate: time)
+        content.body = id
         content.sound = .default
         content.badge = 2
         

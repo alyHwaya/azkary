@@ -15,6 +15,8 @@
 		C92E800E26F1116200FAB92E /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C92E800D26F1116200FAB92E /* 1.jpg */; };
 		C92E801026F1132C00FAB92E /* homeBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = C92E800F26F1132C00FAB92E /* homeBtn.png */; };
 		C92E801226F1138500FAB92E /* detailBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = C92E801126F1138500FAB92E /* detailBottom.png */; };
+		C970124926F34DC000E3B549 /* setingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C970124826F34DC000E3B549 /* setingsViewController.swift */; };
+		C970124B26F3517F00E3B549 /* stars.png in Resources */ = {isa = PBXBuildFile; fileRef = C970124A26F3517F00E3B549 /* stars.png */; };
 		C9AABD2126F0AB27006913D7 /* QuranAlKareem.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9AABD2026F0AB27006913D7 /* QuranAlKareem.ttf */; };
 		C9AABD2326F0C216006913D7 /* alarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AABD2226F0C216006913D7 /* alarmViewController.swift */; };
 		C9E586B326EF8AE60008140D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E586B226EF8AE60008140D /* AppDelegate.swift */; };
@@ -56,6 +58,8 @@
 		C92E800D26F1116200FAB92E /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		C92E800F26F1132C00FAB92E /* homeBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeBtn.png; sourceTree = "<group>"; };
 		C92E801126F1138500FAB92E /* detailBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detailBottom.png; sourceTree = "<group>"; };
+		C970124826F34DC000E3B549 /* setingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setingsViewController.swift; sourceTree = "<group>"; };
+		C970124A26F3517F00E3B549 /* stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stars.png; sourceTree = "<group>"; };
 		C9AABD2026F0AB27006913D7 /* QuranAlKareem.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuranAlKareem.ttf; sourceTree = "<group>"; };
 		C9AABD2226F0C216006913D7 /* alarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarmViewController.swift; sourceTree = "<group>"; };
 		C9E586AF26EF8AE60008140D /* azkary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = azkary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +133,7 @@
 				C9E586B426EF8AE60008140D /* SceneDelegate.swift */,
 				C9E586B626EF8AE60008140D /* ViewController.swift */,
 				C9E586B826EF8AE60008140D /* Main.storyboard */,
+				C970124826F34DC000E3B549 /* setingsViewController.swift */,
 				C9AABD2226F0C216006913D7 /* alarmViewController.swift */,
 				C9E586E626EF94350008140D /* mainViewController.swift */,
 				C92E800926F10BE900FAB92E /* UtilFun.swift */,
@@ -145,6 +150,7 @@
 				C92E800D26F1116200FAB92E /* 1.jpg */,
 				C92E800F26F1132C00FAB92E /* homeBtn.png */,
 				C92E801126F1138500FAB92E /* detailBottom.png */,
+				C970124A26F3517F00E3B549 /* stars.png */,
 			);
 			path = azkary;
 			sourceTree = "<group>";
@@ -277,6 +283,7 @@
 				C9E586BF26EF8AE90008140D /* LaunchScreen.storyboard in Resources */,
 				C9E586BC26EF8AE90008140D /* Assets.xcassets in Resources */,
 				C9E586BA26EF8AE60008140D /* Main.storyboard in Resources */,
+				C970124B26F3517F00E3B549 /* stars.png in Resources */,
 				C92E801226F1138500FAB92E /* detailBottom.png in Resources */,
 				C9AABD2126F0AB27006913D7 /* QuranAlKareem.ttf in Resources */,
 				C92E800E26F1116200FAB92E /* 1.jpg in Resources */,
@@ -308,6 +315,7 @@
 			files = (
 				C9E586B726EF8AE60008140D /* ViewController.swift in Sources */,
 				C9E586B326EF8AE60008140D /* AppDelegate.swift in Sources */,
+				C970124926F34DC000E3B549 /* setingsViewController.swift in Sources */,
 				C92E800A26F10BE900FAB92E /* UtilFun.swift in Sources */,
 				C9E586E726EF94350008140D /* mainViewController.swift in Sources */,
 				C9E586E926EF998F0008140D /* detailViewController.swift in Sources */,
