@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import OneSignal
+import FBSDKCoreKit
+import Firebase
+import GoogleMobileAds
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +19,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // Initialize Facebook SDK
+                FBSDKCoreKit.ApplicationDelegate.shared.application(
+                    application,
+                    didFinishLaunchingWithOptions: launchOptions
+                )
+        
+        // OneSignal initialization
+        OneSignal.initWithLaunchOptions(launchOptions)
+        OneSignal.setAppId("4435b6a9-0af1-4068-8c81-b0e437eaf565")
+
+        // promptForPushNotifications will show the native iOS notification permission prompt.
+        // We recommend removing the following code and instead using an In-App Message to prompt for notification permission (See step 8)
+        OneSignal.promptForPushNotifications(userResponse: { accepted in
+          print("User accepted notifications: \(accepted)")
+        })
+        
+        FirebaseApp.configure()
+        // Initialize the Google Mobile Ads SDK.
+            GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
         return true
     }
+    
+    func application(
+            _ app: UIApplication,
+            open url: URL,
+            options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+        ) -> Bool {
+        
+
+            ApplicationDelegate.shared.application(
+                app,
+                open: url,
+                sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+            )
+        
+        
+        }
 
     // MARK: UISceneSession Lifecycle
 

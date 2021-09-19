@@ -7,9 +7,11 @@
 
 import UIKit
 import UserNotifications
+import GoogleMobileAds
 
 class alarmViewController: UIViewController, UITextFieldDelegate {
-
+    @IBOutlet weak var bannerDown: GADBannerView!
+    @IBOutlet weak var bannerUp: GADBannerView!
     @IBOutlet weak var logo: UIImageView!
     let timePicker = UIDatePicker()
     var currentTxtFld = UITextField()
@@ -26,28 +28,41 @@ class alarmViewController: UIViewController, UITextFieldDelegate {
             setNotification(id: "morning", time: stringToDate(str: morningTxtV.text!))
         }else{
             defaults.setValue(false, forKey: "morningAlarmOn")
+            let center = UNUserNotificationCenter.current()
+            center.removePendingNotificationRequests(withIdentifiers: ["morning"])
+            center.removeDeliveredNotifications(withIdentifiers: ["morning"])
         }
     }
     @IBAction func nightSwitchAct(_ sender: Any) {
         if nightSwitchOut.isOn{
             defaults.setValue(nightTxtV.text!, forKey: "nightAlarm")
             defaults.setValue(true, forKey: "nightAlarmOn")
-            setNotification(id: "night", time: stringToDate(str: morningTxtV.text!))
+            setNotification(id: "night", time: stringToDate(str: nightTxtV.text!))
         }else{
             defaults.setValue(false, forKey: "nightAlarmOn")
+            let center = UNUserNotificationCenter.current()
+            center.removePendingNotificationRequests(withIdentifiers: ["night"])
+            center.removeDeliveredNotifications(withIdentifiers: ["night"])
         }
     }
     @IBOutlet weak var morningSwitchOut: UISwitch!
     @IBOutlet weak var nightSwitchOut: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
+        bannerUp.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerUp.rootViewController = self
+        bannerUp.load(GADRequest())
+        
+        bannerDown.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerDown.rootViewController = self
+        bannerDown.load(GADRequest())
         hideKeyboardWhenTappedAround()
         prepareDatePicker()
         prepareTxtFlds()
         prepareSwitches()
         checkForNotificationAuth()
-        selectedNightAlarm = stringToDate(str: nightTxtV.text ?? dateToStr(myDate: Date()))
-        selectedMorningAlarm = stringToDate(str: morningTxtV.text ?? dateToStr(myDate: Date()))
+        selectedNightAlarm = stringToDate(str: nightTxtV.text ?? "00:00")
+        selectedMorningAlarm = stringToDate(str: morningTxtV.text ?? "00:00")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -104,7 +119,7 @@ class alarmViewController: UIViewController, UITextFieldDelegate {
       
     func textFieldDidBeginEditing(_ textField: UITextField) {
         currentTxtFld = textField
-        timePicker.date = Date()
+        timePicker.date = Date(timeIntervalSinceNow: 0)
         print("-------------------------------")
     }
     
@@ -120,7 +135,7 @@ class alarmViewController: UIViewController, UITextFieldDelegate {
         nightTxtV.inputView = timePicker
         morningTxtV.tag = 1
         nightTxtV.tag = 2
-        let strDate = dateToStr(myDate: Date())
+        let strDate = dateToStr(myDate: Date(timeIntervalSinceNow: 0))
         if let morningTimeDef = defaults.value(forKey: "morningAlarm"){
             morningTxtV.text = morningTimeDef as? String
         }else{
@@ -186,7 +201,8 @@ class alarmViewController: UIViewController, UITextFieldDelegate {
         let dateFormatter = DateFormatter()
 //        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
         dateFormatter.dateFormat = "HH:mm"
-        let date = dateFormatter.date(from:str)!
+        let tempDate : Date = Date(timeIntervalSinceNow: 0)
+        let date = dateFormatter.date(from:str) ?? tempDate
         return date
     }
     

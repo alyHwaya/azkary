@@ -7,9 +7,11 @@
 
 import UIKit
 import StoreKit
+import GoogleMobileAds
 
 class setingsViewController: UIViewController {
-    
+    @IBOutlet weak var bannerDown: GADBannerView!
+    @IBOutlet weak var bannerUp: GADBannerView!
     enum AppStoreReviewManager {
         static func requestReviewIfAppropriate() {
             SKStoreReviewController.requestReview()
@@ -26,6 +28,13 @@ class setingsViewController: UIViewController {
     @IBOutlet weak var logo: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        bannerUp.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerUp.rootViewController = self
+        bannerUp.load(GADRequest())
+        
+        bannerDown.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerDown.rootViewController = self
+        bannerDown.load(GADRequest())
 
         // Do any additional setup after loading the view.
     }

@@ -28,7 +28,50 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eJq-wZ-F4D">
                                 <rect key="frame" x="-10" y="-10" width="434" height="916"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqZ-t0-2yk">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="MdB-53-Fla">
+                                <rect key="frame" x="1.5" y="114" width="411" height="757.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App Logo-01.png" translatesAutoresizingMaskIntoConstraints="NO" id="HsL-4M-8ho">
+                                        <rect key="frame" x="117" y="0.0" width="177" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="hrh-jc-z8O"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI6-yL-Mq6">
+                                        <rect key="frame" x="70.5" y="239" width="270" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="O9X-Lh-r2b"/>
+                                            <constraint firstAttribute="height" constant="56" id="X0U-8s-V9b"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="25"/>
+                                        <state key="normal" backgroundImage="morningBtn.png">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="1OB-6N-Pbg" kind="show" identifier="morning" id="C67-Ko-1ee"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pb9-KM-lvJ">
+                                        <rect key="frame" x="70.5" y="334" width="270" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="270" id="kih-on-hc4"/>
+                                            <constraint firstAttribute="height" constant="58" id="nwP-wn-QnC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="20"/>
+                                        <state key="normal" backgroundImage="nightBtn.png"/>
+                                        <connections>
+                                            <segue destination="1OB-6N-Pbg" kind="show" identifier="night" id="YAB-e9-Dbg"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainMosque.png" translatesAutoresizingMaskIntoConstraints="NO" id="GxP-ys-tx9">
+                                        <rect key="frame" x="0.0" y="431" width="411" height="326.5"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="HsL-4M-8ho" firstAttribute="top" secondItem="MdB-53-Fla" secondAttribute="top" id="2ak-qr-TAh"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqZ-t0-2yk" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="54" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <constraints>
@@ -36,30 +79,6 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="IuC-1Q-gvw"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI6-yL-Mq6">
-                                <rect key="frame" x="72" y="433" width="270" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="270" id="O9X-Lh-r2b"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="25"/>
-                                <state key="normal" backgroundImage="morningBtn.png">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="1OB-6N-Pbg" kind="show" identifier="morning" id="C67-Ko-1ee"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pb9-KM-lvJ">
-                                <rect key="frame" x="72" y="509" width="270" height="58"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="270" id="kih-on-hc4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="20"/>
-                                <state key="normal" backgroundImage="nightBtn.png"/>
-                                <connections>
-                                    <segue destination="1OB-6N-Pbg" kind="show" identifier="night" id="YAB-e9-Dbg"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6D-sU-dHe">
                                 <rect key="frame" x="374" y="124" width="30" height="30"/>
                                 <constraints>
@@ -72,21 +91,7 @@
                                     <segue destination="GcS-eQ-wY3" kind="show" id="Pv0-bM-fWS"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App Logo-01.png" translatesAutoresizingMaskIntoConstraints="NO" id="HsL-4M-8ho">
-                                <rect key="frame" x="117" y="233" width="180" height="180"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="Bhs-Ye-lQh"/>
-                                    <constraint firstAttribute="width" constant="180" id="ziP-2m-wJz"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainMosque.png" translatesAutoresizingMaskIntoConstraints="NO" id="GxP-ys-tx9">
-                                <rect key="frame" x="57" y="572" width="300" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="WEc-fK-Wcv"/>
-                                    <constraint firstAttribute="height" constant="300" id="lG7-fj-4zP"/>
-                                </constraints>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuF-pf-NTJ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuF-pf-NTJ" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="812" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <constraints>
@@ -97,30 +102,27 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GI6-yL-Mq6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0hZ-jF-CXz"/>
-                            <constraint firstItem="pb9-KM-lvJ" firstAttribute="top" secondItem="GI6-yL-Mq6" secondAttribute="bottom" constant="20" id="1FL-xY-ilh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W6D-sU-dHe" secondAttribute="trailing" constant="10" id="4c5-je-3fs"/>
-                            <constraint firstItem="GxP-ys-tx9" firstAttribute="top" secondItem="pb9-KM-lvJ" secondAttribute="bottom" constant="5" id="FpU-zr-1hK"/>
+                            <constraint firstAttribute="bottom" secondItem="MdB-53-Fla" secondAttribute="bottom" constant="24.5" id="8LO-n2-HWh"/>
                             <constraint firstItem="W6D-sU-dHe" firstAttribute="top" secondItem="hqZ-t0-2yk" secondAttribute="bottom" constant="20" id="HZP-FN-VAr"/>
                             <constraint firstItem="AuF-pf-NTJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ICo-dn-H3O"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AuF-pf-NTJ" secondAttribute="bottom" id="KPA-ql-Lda"/>
                             <constraint firstItem="hqZ-t0-2yk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Qxw-tw-3MZ"/>
                             <constraint firstItem="eJq-wZ-F4D" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-10" id="RJn-He-q60"/>
-                            <constraint firstItem="HsL-4M-8ho" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SMp-G8-XSo"/>
-                            <constraint firstItem="GI6-yL-Mq6" firstAttribute="top" secondItem="HsL-4M-8ho" secondAttribute="bottom" constant="20" id="Urh-AI-zBR"/>
                             <constraint firstItem="hqZ-t0-2yk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Whe-gv-1XR"/>
                             <constraint firstAttribute="trailing" secondItem="eJq-wZ-F4D" secondAttribute="trailing" constant="-10" id="afB-al-aiV"/>
                             <constraint firstItem="eJq-wZ-F4D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-10" id="cXf-ME-O20"/>
-                            <constraint firstItem="GxP-ys-tx9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gz6-j5-KQj"/>
-                            <constraint firstItem="AuF-pf-NTJ" firstAttribute="top" secondItem="GxP-ys-tx9" secondAttribute="bottom" constant="-60" id="lmA-Cl-dRv"/>
+                            <constraint firstItem="MdB-53-Fla" firstAttribute="top" secondItem="hqZ-t0-2yk" secondAttribute="bottom" constant="10" id="hBR-gH-b3F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AuF-pf-NTJ" secondAttribute="trailing" id="pNp-xu-fyW"/>
-                            <constraint firstItem="pb9-KM-lvJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xkz-94-iHa"/>
+                            <constraint firstItem="MdB-53-Fla" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w5o-0s-JY4"/>
                             <constraint firstItem="hqZ-t0-2yk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zX2-dn-brq"/>
                             <constraint firstAttribute="bottom" secondItem="eJq-wZ-F4D" secondAttribute="bottom" constant="-10" id="zXf-dL-b25"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="egx-77-swf"/>
                     <connections>
+                        <outlet property="bannerDown" destination="AuF-pf-NTJ" id="xez-jp-eYn"/>
+                        <outlet property="bannerUp" destination="hqZ-t0-2yk" id="xmx-af-7IE"/>
                         <outlet property="logo" destination="HsL-4M-8ho" id="Nau-Gz-k31"/>
                     </connections>
                 </viewController>
@@ -153,13 +155,63 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="qeF-R9-arq"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الإعدادات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHd-kd-Rz4">
-                                <rect key="frame" x="144" y="135" width="126" height="58"/>
-                                <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="35"/>
-                                <color key="textColor" red="0.054157201725875993" green="0.080791460646705671" blue="0.085621817495951769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T96-29-1JF">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kz5-HN-iLK">
+                                <rect key="frame" x="118.5" y="110" width="177" height="618"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="الإعدادات" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHd-kd-Rz4">
+                                        <rect key="frame" x="25.5" y="0.0" width="126" height="248"/>
+                                        <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="35"/>
+                                        <color key="textColor" red="0.054157201725875993" green="0.080791460646705671" blue="0.085621817495951769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="App Logo-01.png" translatesAutoresizingMaskIntoConstraints="NO" id="7li-9K-rLJ">
+                                        <rect key="frame" x="0.0" y="258" width="177" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="pJg-aQ-A5V"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMt-km-bb2">
+                                        <rect key="frame" x="51.5" y="448" width="74" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="wf1-5Y-oR3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="35"/>
+                                        <state key="normal" title="المنبه">
+                                            <color key="titleColor" red="0.3059360606" green="0.45639398660000002" blue="0.48368085329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="7nc-Yq-59L" kind="show" id="6qp-Io-b2Q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwv-6n-ZUY">
+                                        <rect key="frame" x="2" y="508" width="173" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9lZ-d3-zMq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="35"/>
+                                        <state key="normal" title="أرسل تقييمك">
+                                            <color key="titleColor" red="0.3059360606" green="0.45639398660000002" blue="0.48368085329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendReview:" destination="GcS-eQ-wY3" eventType="touchUpInside" id="b0j-f5-oCe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSx-q4-REW">
+                                        <rect key="frame" x="63.5" y="568" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9Z8-GU-7lo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="35"/>
+                                        <state key="normal" title="شير">
+                                            <color key="titleColor" red="0.3059360606" green="0.45639398660000002" blue="0.48368085329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareBtnAct:" destination="GcS-eQ-wY3" eventType="touchUpInside" id="VrG-iH-WDa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T96-29-1JF" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="40" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <constraints>
@@ -167,7 +219,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ny8-He-eh7"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPM-hN-Q2r">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPM-hN-Q2r" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="748" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <constraints>
@@ -175,70 +227,31 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Ker-ur-5Pc"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMt-km-bb2">
-                                <rect key="frame" x="170" y="438" width="74" height="70"/>
-                                <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="35"/>
-                                <state key="normal" title="المنبه">
-                                    <color key="titleColor" red="0.3059360606" green="0.45639398660000002" blue="0.48368085329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="7nc-Yq-59L" kind="show" id="6qp-Io-b2Q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSx-q4-REW">
-                                <rect key="frame" x="182" y="578" width="50" height="70"/>
-                                <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="35"/>
-                                <state key="normal" title="شير">
-                                    <color key="titleColor" red="0.3059360606" green="0.45639398660000002" blue="0.48368085329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="shareBtnAct:" destination="GcS-eQ-wY3" eventType="touchUpInside" id="VrG-iH-WDa"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="App Logo-01.png" translatesAutoresizingMaskIntoConstraints="NO" id="7li-9K-rLJ">
-                                <rect key="frame" x="118.5" y="213" width="177" height="205"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwv-6n-ZUY">
-                                <rect key="frame" x="120.5" y="508" width="173" height="70"/>
-                                <fontDescription key="fontDescription" name="STC-Bold" family="STC" pointSize="35"/>
-                                <state key="normal" title="أرسل تقييمك">
-                                    <color key="titleColor" red="0.3059360606" green="0.45639398660000002" blue="0.48368085329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="sendReview:" destination="GcS-eQ-wY3" eventType="touchUpInside" id="b0j-f5-oCe"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M4l-8F-hhy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5sb-Hz-8CH" firstAttribute="top" secondItem="8D6-Be-mNs" secondAttribute="top" id="57P-pM-p1T"/>
-                            <constraint firstItem="jwv-6n-ZUY" firstAttribute="centerX" secondItem="8D6-Be-mNs" secondAttribute="centerX" id="6yB-O2-Sgh"/>
                             <constraint firstItem="5sb-Hz-8CH" firstAttribute="centerX" secondItem="8D6-Be-mNs" secondAttribute="centerX" id="8pm-eF-ff3"/>
+                            <constraint firstItem="kPM-hN-Q2r" firstAttribute="top" secondItem="Kz5-HN-iLK" secondAttribute="bottom" constant="20" id="ADw-I1-i5c"/>
                             <constraint firstItem="0YS-eb-eJf" firstAttribute="top" secondItem="8D6-Be-mNs" secondAttribute="top" constant="-10" id="BRH-nh-PAc"/>
                             <constraint firstItem="0YS-eb-eJf" firstAttribute="leading" secondItem="8D6-Be-mNs" secondAttribute="leading" constant="-10" id="EQT-A2-ZhI"/>
-                            <constraint firstItem="oSx-q4-REW" firstAttribute="top" secondItem="jwv-6n-ZUY" secondAttribute="bottom" id="Gbx-V0-dqA"/>
                             <constraint firstItem="kPM-hN-Q2r" firstAttribute="leading" secondItem="M4l-8F-hhy" secondAttribute="leading" id="GkC-R7-ebd"/>
                             <constraint firstItem="M4l-8F-hhy" firstAttribute="bottom" secondItem="kPM-hN-Q2r" secondAttribute="bottom" constant="10" id="HvF-oc-eTl"/>
-                            <constraint firstItem="7li-9K-rLJ" firstAttribute="top" secondItem="kHd-kd-Rz4" secondAttribute="bottom" constant="20" id="JR1-Gk-SCv"/>
                             <constraint firstItem="T96-29-1JF" firstAttribute="top" secondItem="M4l-8F-hhy" secondAttribute="top" constant="40" id="JRF-o8-cdA"/>
-                            <constraint firstItem="kHd-kd-Rz4" firstAttribute="centerX" secondItem="8D6-Be-mNs" secondAttribute="centerX" id="JbN-AA-4vi"/>
-                            <constraint firstItem="7li-9K-rLJ" firstAttribute="centerX" secondItem="8D6-Be-mNs" secondAttribute="centerX" id="M0o-82-Dfz"/>
+                            <constraint firstItem="Kz5-HN-iLK" firstAttribute="top" secondItem="T96-29-1JF" secondAttribute="bottom" constant="20" id="Kk6-bt-ZEx"/>
                             <constraint firstItem="T96-29-1JF" firstAttribute="leading" secondItem="M4l-8F-hhy" secondAttribute="leading" id="MDY-Pe-5yM"/>
-                            <constraint firstItem="jwv-6n-ZUY" firstAttribute="top" secondItem="zMt-km-bb2" secondAttribute="bottom" id="Nbb-rC-swa"/>
-                            <constraint firstItem="zMt-km-bb2" firstAttribute="top" secondItem="7li-9K-rLJ" secondAttribute="bottom" constant="20" id="Q4G-c9-Voy"/>
-                            <constraint firstItem="kPM-hN-Q2r" firstAttribute="top" secondItem="oSx-q4-REW" secondAttribute="bottom" constant="100" id="X56-k8-89y"/>
                             <constraint firstAttribute="bottom" secondItem="0YS-eb-eJf" secondAttribute="bottom" constant="-10" id="XO8-KH-WMu"/>
                             <constraint firstAttribute="trailing" secondItem="0YS-eb-eJf" secondAttribute="trailing" constant="-10" id="YKT-JQ-2SE"/>
-                            <constraint firstItem="kHd-kd-Rz4" firstAttribute="top" secondItem="T96-29-1JF" secondAttribute="bottom" constant="45" id="ZxQ-hx-wbr"/>
-                            <constraint firstItem="oSx-q4-REW" firstAttribute="centerX" secondItem="8D6-Be-mNs" secondAttribute="centerX" id="fcN-dS-9j3"/>
+                            <constraint firstItem="Kz5-HN-iLK" firstAttribute="centerX" secondItem="8D6-Be-mNs" secondAttribute="centerX" id="go7-02-ui1"/>
                             <constraint firstItem="T96-29-1JF" firstAttribute="trailing" secondItem="M4l-8F-hhy" secondAttribute="trailing" id="lWV-5m-Vdl"/>
-                            <constraint firstItem="zMt-km-bb2" firstAttribute="centerX" secondItem="8D6-Be-mNs" secondAttribute="centerX" id="wbS-Mv-dDi"/>
                             <constraint firstItem="kPM-hN-Q2r" firstAttribute="trailing" secondItem="M4l-8F-hhy" secondAttribute="trailing" id="yAp-AT-AX9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="J53-th-VhH"/>
                     <connections>
+                        <outlet property="bannerDown" destination="kPM-hN-Q2r" id="6gy-LH-mHJ"/>
+                        <outlet property="bannerUp" destination="T96-29-1JF" id="5xp-Zx-7ge"/>
                         <outlet property="logo" destination="7li-9K-rLJ" id="zFR-4V-k3I"/>
                     </connections>
                 </viewController>
@@ -311,14 +324,14 @@
                                     <action selector="nightSwitchAct:" destination="7nc-Yq-59L" eventType="valueChanged" id="9oQ-5f-NsX"/>
                                 </connections>
                             </switch>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8n-ub-RHq">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8n-ub-RHq" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="753" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="TT7-28-e2K"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQk-eU-ahB">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQk-eU-ahB" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="40" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <constraints>
@@ -375,6 +388,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="ncF-2z-pQZ"/>
                     <connections>
+                        <outlet property="bannerDown" destination="T8n-ub-RHq" id="xqk-ai-n8J"/>
+                        <outlet property="bannerUp" destination="mQk-eU-ahB" id="gbv-0T-v7c"/>
                         <outlet property="logo" destination="qxn-SB-a0Q" id="KVr-Cf-ROd"/>
                         <outlet property="morningSwitchOut" destination="EQ8-Yy-shc" id="KpQ-Wo-Uk8"/>
                         <outlet property="morningTxtV" destination="GBx-xO-LDP" id="8aZ-cy-wGt"/>
@@ -397,7 +412,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="WZH-A7-2tA">
                                 <rect key="frame" x="-10" y="-10" width="434" height="916"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="suV-z4-OEc">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="suV-z4-OEc" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="54" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <constraints>
@@ -457,7 +472,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTT-ZL-Bka">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTT-ZL-Bka" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="817" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <constraints>
@@ -543,6 +558,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="a6Y-0F-HOy"/>
                     <connections>
+                        <outlet property="bannerDown" destination="vTT-ZL-Bka" id="3Ml-rL-9E2"/>
+                        <outlet property="bannerUp" destination="suV-z4-OEc" id="VS5-Ib-5Nl"/>
                         <outlet property="logo" destination="Gdu-7e-c92" id="FHt-kW-1at"/>
                         <outlet property="reps" destination="wZp-23-xVX" id="AvW-fF-ub6"/>
                         <outlet property="zekrTxtVw" destination="neJ-7Q-6zp" id="mR9-7P-yg8"/>

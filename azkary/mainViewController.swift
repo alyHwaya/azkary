@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import Firebase
+import GoogleMobileAds
 
 class mainViewController: UIViewController {
-
+    
+    @IBOutlet weak var bannerDown: GADBannerView!
+    @IBOutlet weak var bannerUp: GADBannerView!
     let myDbMorning : KeyValuePairs =  ["اللّهُ لاَ إِلَـهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ":1,
                                         "قُلْ هُوَ ٱللَّهُ أَحَدٌ، ٱللَّهُ ٱلصَّمَدُ، لَمْ يَلِدْ وَلَمْ يُولَدْ، وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ":3,
                                         "قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ، مِن شَرِّ مَا خَلَقَ، وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ، وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِى ٱلْعُقَدِ، وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ":3,
@@ -79,11 +84,23 @@ class mainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.shared.applicationIconBadgeNumber = 0
+        
+        bannerUp.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerUp.rootViewController = self
+        bannerUp.load(GADRequest())
+        
+        bannerDown.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerDown.rootViewController = self
+        bannerDown.load(GADRequest())
+        
 
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        Settings.setAdvertiserTrackingEnabled(false)
+        
+        AppEvents.logEvent(.completedTutorial)
         
         let move = UtilFun.makeTransform(vw: logo, scaleX: 4, scaleY: 4, translationX: 0, translationY: 0)
         UIView.animate(withDuration: 0.7, animations: {

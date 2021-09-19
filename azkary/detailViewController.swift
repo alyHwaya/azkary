@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import GoogleMobileAds
 
 class detailViewController: UIViewController {
 
     
-    
+    @IBOutlet weak var bannerDown: GADBannerView!
+    @IBOutlet weak var bannerUp: GADBannerView!
     var myKvPairs : KeyValuePairs =  ["":1]
 
 
@@ -22,7 +25,8 @@ class detailViewController: UIViewController {
     var currentRep = 1
     @IBOutlet weak var zekrTxtVw: UITextView!
     @IBAction func nextBtnAct(_ sender: Any) {
-       nextZekr()
+        AppEvents.logEvent(.completedTutorial)
+        nextZekr()
     }
     @IBAction func previousBtnAct(_ sender: Any) {
         currentZekrIndex -= 1
@@ -56,6 +60,13 @@ class detailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bannerUp.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerUp.rootViewController = self
+        bannerUp.load(GADRequest())
+        
+        bannerDown.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerDown.rootViewController = self
+        bannerDown.load(GADRequest())
         updateScreen()
         
         // Do any additional setup after loading the view.
