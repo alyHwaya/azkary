@@ -49,11 +49,11 @@ class alarmViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nightSwitchOut: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
-        bannerUp.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerUp.adUnitID = "ca-app-pub-9037650239384734/5363519737"
         bannerUp.rootViewController = self
         bannerUp.load(GADRequest())
         
-        bannerDown.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerDown.adUnitID = "ca-app-pub-9037650239384734/1145073121"
         bannerDown.rootViewController = self
         bannerDown.load(GADRequest())
         hideKeyboardWhenTappedAround()

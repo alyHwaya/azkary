@@ -85,11 +85,11 @@ class mainViewController: UIViewController {
         super.viewDidLoad()
         UIApplication.shared.applicationIconBadgeNumber = 0
         
-        bannerUp.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerUp.adUnitID = "ca-app-pub-9037650239384734/5652112588"
         bannerUp.rootViewController = self
         bannerUp.load(GADRequest())
         
-        bannerDown.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerDown.adUnitID = "ca-app-pub-9037650239384734/2919999853"
         bannerDown.rootViewController = self
         bannerDown.load(GADRequest())
         

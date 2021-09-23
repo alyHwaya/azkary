@@ -60,11 +60,11 @@ class detailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bannerUp.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerUp.adUnitID = "ca-app-pub-9037650239384734/1521295886"
         bannerUp.rootViewController = self
         bannerUp.load(GADRequest())
         
-        bannerDown.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerDown.adUnitID = "ca-app-pub-9037650239384734/7078736710"
         bannerDown.rootViewController = self
         bannerDown.load(GADRequest())
         updateScreen()

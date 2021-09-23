@@ -18,7 +18,7 @@ class setingsViewController: UIViewController {
         }
     }
     @IBAction func shareBtnAct(_ sender: Any) {
-        sharingStuff(myUrlStr: "https://google.com")
+        sharingStuff(myUrlStr: "https://apps.apple.com/qa/app/%D8%A7%D8%B0%D9%83%D8%A7%D8%B1-%D8%A7%D9%84%D8%B5%D8%A8%D8%A7%D8%AD-%D9%88-%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D8%A1-%D8%A3%D8%B0%D9%83%D8%A7%D8%B1%D9%83/id1586125732")
     }
     @IBAction func sendReview(_ sender: Any) {
         DispatchQueue.main.async {
@@ -28,11 +28,11 @@ class setingsViewController: UIViewController {
     @IBOutlet weak var logo: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        bannerUp.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerUp.adUnitID = "ca-app-pub-9037650239384734/4560384586"
         bannerUp.rootViewController = self
         bannerUp.load(GADRequest())
         
-        bannerDown.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerDown.adUnitID = "ca-app-pub-9037650239384734/7688083135"
         bannerDown.rootViewController = self
         bannerDown.load(GADRequest())
 
